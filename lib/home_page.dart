@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
               crossAxisCount: 2,
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
-              childAspectRatio: 0.610
+              childAspectRatio: 0.600
           ),
           itemBuilder: (BuildContext context, int index){
             return CarsList(index_car: index);
