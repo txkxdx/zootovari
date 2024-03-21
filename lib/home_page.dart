@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_grid_view/cars_list.dart';
 import 'package:flutter_grid_view/models/cars.dart';
+import 'cart_favorites.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,12 +11,25 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title:
-        const Text('Автомобили',
-          style: TextStyle
-            (fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold
-          ),
+        const Row(
+          children: [
+            Text('Автомобили',
+              style: TextStyle
+                (fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold
+              ),
+            ),
+          ],
         ),
         centerTitle: true,
+        actions: [
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => CartFavorites(index_favorite: index_car)));
+          }, icon: Icon(Icons.favorite)),
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ShoppingCart()));
+          }, icon: Icon(Icons.shopping_cart)
+          )
+        ],
       ),
       body: GridView.builder(
           itemCount: carsList.length,

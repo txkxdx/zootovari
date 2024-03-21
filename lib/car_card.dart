@@ -3,13 +3,25 @@ import 'package:flutter_grid_view/table.dart';
 import 'package:flutter_grid_view/models/cars.dart';
 import 'package:flutter_grid_view/swiper.dart';
 import 'package:flutter_grid_view/video_player.dart';
+
+import 'cart_favorites.dart';
 class CarCart extends StatelessWidget {
   const CarCart({Key? key, required this.index_car}) : super(key: key);
   final int index_car;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(title: Text(''),
+        actions: [
+          IconButton(onPressed: (){
+            shoppingCart.add(carsList[index_car]);
+          }, icon: Icon(Icons.favorite)),
+          IconButton(onPressed: (){
+           favorites.add(carsList[index_car]);
+          }, icon: Icon(Icons.shopping_cart)
+          )
+        ],
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),

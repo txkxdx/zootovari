@@ -23,3 +23,11 @@ List<Cars> carsList = [
   Cars(9, 'Bugatti bolide', 'https://a.d-cd.net/DEIkAvrO-nU7y9vLXQZS_dk4W2s-1920.jpg', 'Luxe*', 950000000, 'Bugatti Bolide — спортивный автомобиль, разработанный компанией Bugatti Engineering GmbH в Вольфсбурге и производимый в Мольсеме компанией Bugatti Automobiles S.A.S. с 13 августа 2021 года.', ['https://s0.rbk.ru/v6_top_pics/media/img/6/98/756038967873986.jpg','https://kolesa-uploads.ru/-/cf0eb716-b1eb-4a20-8fb3-e9ee445daa27/bolide-series-05.jpg', 'https://www.renderhub.com/davedesign/bugatti-bolide-2024/bugatti-bolide-2024-01.jpg'], ['7993 см³', '1825 л. с.', 'Бензиновый', 'Купе', 'Автомат'], 'https://www.youtube.com/watch?v=5nVfSNQfzR4'),
   Cars(10, 'AUDI RS6 C7', 'https://wheelfront.com/wp-content/uploads/formidable/8/Audi_RS6_C7_Vossen_Forged_M-X4T_bronze_wheels_1.jpg', 'Performance', 8000000, 'Audi RS 6 — спортивный автомобиль, выпускаемый подразделением Audi Sport GmbH (ранее — quattro GmbH) на платформе Audi A6. Автомобиль выпускается в кузове универсал (Avant). До третьего поколения выпускался в двух типах кузова — седан и универсал (Avant)', ['https://wheelfront.com/wp-content/uploads/formidable/8/audi-rs6-with-21inch-ispiri-ffr6-aftermarket-wheels-1.jpg','https://a.allegroimg.com/s1024/0c57c6/fa922aa84c15842e147cd80fe639','https://i.ytimg.com/vi/2ZBYmMpt158/maxresdefault.jpg'], ['3996 см³','630 л.с.','Бензиновый','Универсал','Автомат'], 'https://www.youtube.com/watch?v=pNx1eaUqV1A')
 ];
+
+List<Cars> shoppingCart = [
+
+];
+
+List<Cars> favorites = [
+
+];
