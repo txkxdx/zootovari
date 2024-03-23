@@ -5,23 +5,26 @@ import 'package:flutter_grid_view/swiper.dart';
 import 'package:flutter_grid_view/video_player.dart';
 
 import 'cart_favorites.dart';
-class CarCart extends StatelessWidget {
-  const CarCart({Key? key, required this.index_car}) : super(key: key);
+
+class Cardofcar extends StatefulWidget {
+  int index_car;
+  Cardofcar({super.key, required this.index_car});
+
+  @override
+  State<Cardofcar> createState() => _CardofcarState(index_car);
+}
+
+class _CardofcarState extends State<Cardofcar> {
   final int index_car;
+  bool _isFavorite = false;
+  Color _FavColor = Colors.black;
+  int count = 0;
+  _CardofcarState(this.index_car);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(title: Text(''),
-        actions: [
-          IconButton(onPressed: (){
-            shoppingCart.add(carsList[index_car]);
-          }, icon: Icon(Icons.favorite)),
-          IconButton(onPressed: (){
-           favorites.add(carsList[index_car]);
-          }, icon: Icon(Icons.shopping_cart)
-          )
-        ],
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),
@@ -32,11 +35,40 @@ class CarCart extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.all(8),
-            child: Text('Название автомобиля: ${carsList[index_car].name}', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),),
+            child: Text('Название автомобиля: ${carsList[index_car].name}', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
           ),
           Container(
             margin: EdgeInsets.all(8),
-            child: Text('Цена: ${carsList[index_car].cost}', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.green),),
+            child: Row(
+              children: [
+                Text('Цена: ${carsList[index_car].cost}', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.green),),
+                IconButton(onPressed: (){
+                  if (_isFavorite == false) {
+                    favorites.add(carsList[index_car]);
+                    _FavColor = Colors.red;
+                    setState(() {
+                      _isFavorite = !_isFavorite;
+                    });
+                  }
+                  else if (_isFavorite == true){
+                    favorites.removeWhere((element) => element.id == carsList[index_car].id);
+                    _FavColor = Colors.black;
+                    setState(() {
+                      _isFavorite = !_isFavorite;
+                    });
+                  }
+                }, icon: Icon(Icons.favorite),
+                  color: _FavColor,
+                  selectedIcon: Icon(Icons.favorite),
+                  isSelected: _isFavorite,
+                ),
+                IconButton(onPressed: (){
+                  shoppingCart.add(carsList[index_car]);
+
+                }, icon: Icon(Icons.shopping_cart)
+                )
+              ],
+            ),
           ),
           Container(
             margin: EdgeInsets.all(8),
@@ -60,7 +92,6 @@ class CarCart extends StatelessWidget {
             child: ExampleTable(index_car: index_car),
           ),
           Container(
-
             margin: EdgeInsets.all(8),
             child: VideoWidget(index_car: index_car),
           )
@@ -69,3 +100,5 @@ class CarCart extends StatelessWidget {
     );
   }
 }
+
+

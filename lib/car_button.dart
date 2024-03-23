@@ -10,7 +10,7 @@ class ToCar extends StatelessWidget {
         child: Text('${carsList[index_car].name}'),
         onPressed: (){
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => CarCart(index_car: index_car))
+              MaterialPageRoute(builder: (context) => Cardofcar(index_car: index_car))
           );
         }
     );
