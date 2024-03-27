@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_grid_view/hotbuy_menu.dart';
 import 'package:flutter_grid_view/table.dart';
 import 'package:flutter_grid_view/models/cars.dart';
 import 'package:flutter_grid_view/swiper.dart';
@@ -39,9 +40,10 @@ class _CardofcarState extends State<Cardofcar> {
           ),
           Container(
             margin: EdgeInsets.all(8),
+
             child: Row(
               children: [
-                Text('Цена: ${carsList[index_car].cost}', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.green),),
+                Text('Цена: ${carsList[index_car].cost}', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),),
                 IconButton(onPressed: (){
                   if (_isFavorite == false) {
                     favorites.add(carsList[index_car]);
@@ -66,7 +68,21 @@ class _CardofcarState extends State<Cardofcar> {
                   shoppingCart.add(carsList[index_car]);
 
                 }, icon: Icon(Icons.shopping_cart)
-                )
+                ),
+                Column(
+                  children: [
+                    IconButton(
+                      icon: const Icon(
+                        Icons.send,
+                        color: Colors.red,
+                      ),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => HotBuy()));
+                      },
+                    ),
+                    Text("Hot buy!"),
+                  ],
+                ),
               ],
             ),
           ),

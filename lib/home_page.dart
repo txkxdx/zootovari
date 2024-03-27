@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_grid_view/basket_builder.dart';
 import 'package:flutter_grid_view/cars_list.dart';
 import 'package:flutter_grid_view/favorites_builder.dart';
+import 'package:flutter_grid_view/history_builder.dart';
 import 'package:flutter_grid_view/models/cars.dart';
 import 'cart_favorites.dart';
 
@@ -26,10 +27,15 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => FavoriteObject()));
-          }, icon: Icon(Icons.favorite)),
+          }, icon: Icon(Icons.favorite)
+          ),
           IconButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context) => BasketObject()));
           }, icon: Icon(Icons.shopping_cart)
+          ),
+          IconButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => HistoryObject()));
+          }, icon: Icon(Icons.history)
           )
         ],
       ),

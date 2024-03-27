@@ -7,7 +7,7 @@ final index_car;
   @override
   Widget build(BuildContext context) {
     return Table(
-      border: TableBorder.all(width: 1, color: Colors.white),
+      border: TableBorder.all(width: 1, color: Colors.black),
       children: [
         TableRow(
             children: [
