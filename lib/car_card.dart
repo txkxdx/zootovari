@@ -66,7 +66,6 @@ class _CardofcarState extends State<Cardofcar> {
                 ),
                 IconButton(onPressed: (){
                   shoppingCart.add(carsList[index_car]);
-
                 }, icon: Icon(Icons.shopping_cart)
                 ),
                 Column(
