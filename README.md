@@ -20,6 +20,8 @@
 
 ## hot buy 
 
+![image](https://github.com/txkxdx/bedaPolnaya/assets/156675683/728f8458-e9da-4975-b715-50c45934fc63)
+
 ![image](https://github.com/txkxdx/bedaPolnaya/assets/156675683/f9db0cb1-bac9-4e6d-b57e-4bb863066a65)
 
 ![image](https://github.com/txkxdx/bedaPolnaya/assets/156675683/9243e2d3-f8e7-4076-b303-44f403a95250)
