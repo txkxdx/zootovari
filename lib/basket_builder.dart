@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_grid_view/basket_car.dart';
+import 'package:flutter_grid_view/basket_item.dart';
 import 'package:flutter_grid_view/cart_favorites.dart';
-import 'package:flutter_grid_view/models/cars.dart';
+import 'package:flutter_grid_view/models/entity.dart';
 
 
 class BasketObject extends StatelessWidget {

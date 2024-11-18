@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_grid_view/models/cars.dart';
+import 'package:flutter_grid_view/models/entity.dart';
 
 class ShoppingCart extends StatefulWidget {
   int basket_index;
@@ -32,12 +32,12 @@ class _ShoppingCartState extends State<ShoppingCart> {
               ),
               ),
               Center(
-                  child: Expanded(child: Text('Название автомобиля: ${shoppingCart[basket_index].name}'
+                  child: Expanded(child: Text('Имя питомца: ${shoppingCart[basket_index].name}'
                   ),
                   )
               ),
               Center(
-                  child: Expanded(child: Text('Комплектация: ${shoppingCart[basket_index].complex}'
+                  child: Expanded(child: Text('Порода: ${shoppingCart[basket_index].complex}'
                   ),
                   )
               ),

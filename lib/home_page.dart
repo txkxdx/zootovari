@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_grid_view/basket_builder.dart';
-import 'package:flutter_grid_view/cars_list.dart';
+import 'package:flutter_grid_view/entity_list.dart';
 import 'package:flutter_grid_view/favorites_builder.dart';
 import 'package:flutter_grid_view/history_builder.dart';
-import 'package:flutter_grid_view/models/cars.dart';
+import 'package:flutter_grid_view/models/entity.dart';
 import 'cart_favorites.dart';
 
 class HomePage extends StatelessWidget {
@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
         title:
         const Row(
           children: [
-            Text('Автомобили',
+            Text('Питомцы',
               style: TextStyle
                 (fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold
               ),
@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: GridView.builder(
-          itemCount: carsList.length,
+          itemCount: entityList.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 8,
@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
               childAspectRatio: 0.600
           ),
           itemBuilder: (BuildContext context, int index){
-            return CarsList(index_car: index);
+            return EntityList(index_Entity: index);
           }
       ),
     );

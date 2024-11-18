@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_grid_view/models/cars.dart';
+import 'package:flutter_grid_view/models/entity.dart';
 class ExampleTable extends StatelessWidget {
-  const ExampleTable({Key? key, required this.index_car}) : super(key: key);
-final index_car;
+  const ExampleTable({Key? key, required this.index_Entity}) : super(key: key);
+final index_Entity;
   @override
   Widget build(BuildContext context) {
     return Table(
@@ -15,7 +15,7 @@ final index_car;
                 child: Text('Объем двигателя'
                 ),
               ),
-              Center(child: Text('${carsList[index_car].characters[0]}'
+              Center(child: Text('${entityList[index_Entity].characters[0]}'
               ),
               )
             ]
@@ -25,7 +25,7 @@ final index_car;
             child: Text('Мощность'
             ),
           ),
-          Center(child: Text('${carsList[index_car].characters[1]}'
+          Center(child: Text('${entityList[index_Entity].characters[1]}'
           ),
           )
         ]
@@ -35,7 +35,7 @@ final index_car;
               child: Text('Тип двигателя'
             ),
             ),
-            Center(child: Text('${carsList[index_car].characters[2]}'
+            Center(child: Text('${entityList[index_Entity].characters[2]}'
             ),
             )
           ]
@@ -44,14 +44,14 @@ final index_car;
         Center(child: Text('Тип кузова'
         ),
         ),
-          Center(child: Text('${carsList[index_car].characters[3]}'),)
+          Center(child: Text('${entityList[index_Entity].characters[3]}'),)
         ]
         ),
         TableRow(children: [
         Center(child: Text('Тип КПП'
         ),
         ),
-          Center(child: Text('${carsList[index_car].characters[4]}'),)
+          Center(child: Text('${entityList[index_Entity].characters[4]}'),)
         ]
         )
       ],

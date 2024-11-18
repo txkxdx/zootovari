@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_grid_view/buy_history.dart';
-import 'package:flutter_grid_view/models/cars.dart';
+import 'package:flutter_grid_view/models/entity.dart';
 import 'package:flutter_grid_view/success_purchase_builder.dart';
 
 

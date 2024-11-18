@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_grid_view/models/cars.dart';
+import 'package:flutter_grid_view/models/entity.dart';
 
 class CartFavorites extends StatefulWidget {
   CartFavorites({super.key, required this.index_favorite});
@@ -29,12 +29,12 @@ class _CartFavoritesState extends State<CartFavorites> {
               ),
               ),
               Center(
-                  child: Expanded(child: Text('Название автомобиля: ${favorites[index_favorite].name}'
+                  child: Expanded(child: Text('Имя питомца: ${favorites[index_favorite].name}'
                   ),
                   )
               ),
               Center(
-                  child: Expanded(child: Text('Комплектация: ${favorites[index_favorite].complex}'
+                  child: Expanded(child: Text('Порода: ${favorites[index_favorite].complex}'
                   ),
                   )
               ),

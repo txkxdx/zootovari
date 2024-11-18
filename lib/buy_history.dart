@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_grid_view/models/cars.dart';
+import 'package:flutter_grid_view/models/entity.dart';
 
 class BuyHistory extends StatefulWidget {
   int history_index;
@@ -32,12 +32,12 @@ class _BuyHistoryState extends State<BuyHistory> {
             ),
             ),
             Center(
-                child: Expanded(child: Text('Название автомобиля: ${shoppingCart[history_index].name}'
+                child: Expanded(child: Text('Имя питомца: ${shoppingCart[history_index].name}'
                 ),
                 )
             ),
             Center(
-                child: Expanded(child: Text('Комплектация: ${shoppingCart[history_index].complex}'
+                child: Expanded(child: Text('Порода: ${shoppingCart[history_index].complex}'
                 ),
                 )
             ),
